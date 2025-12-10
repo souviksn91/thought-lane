@@ -21,7 +21,6 @@ app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5MB limit
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-
 db = SQLAlchemy(app)
 Migrate(app,db)
 
