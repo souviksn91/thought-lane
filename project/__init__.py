@@ -21,8 +21,6 @@ app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5MB limit
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://thoughtlane_admin:Souvik%402405@localhost/thought_lane'  # local  # OLD
-
 
 db = SQLAlchemy(app)
 Migrate(app,db)

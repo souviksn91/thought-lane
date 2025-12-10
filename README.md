@@ -100,8 +100,8 @@ It allows users to create accounts, write blogs, upload cover images, browse pos
 ## Setup Instructions
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/souviksn91/pycontacts.git
-   cd pycontacts
+   git clone https://github.com/souviksn91/thought-lane.git
+   cd thoughtlane
    ```
 
 2. **Create a virtual environment:**
