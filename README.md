@@ -22,19 +22,19 @@ It allows users to create accounts, write blogs, upload cover images, browse pos
 
 ## Screenshots
 
-- **Sign Up Page**
+  **Sign Up Page**
 <br>
   User registration form with unique username and email validation.
 
-  <img width="803" height="773" alt="Image" src="https://github.com/user-attachments/assets/49385475-3e11-4e93-b2b0-75bfe5bf583d" />
+<img width="803" height="773" alt="Image" src="https://github.com/user-attachments/assets/49385475-3e11-4e93-b2b0-75bfe5bf583d" />
 <br><br>
 
 
-- **Create New Blog Post**
+  **Create New Blog Post**
 <br>
-Blog creation form featuring category selection and image upload support.
+  Blog creation form featuring category selection and image upload support.
 
-  <img width="818" height="1126" alt="Image" src="https://github.com/user-attachments/assets/acabc2c1-a299-49c4-adca-e36bcd147ef3" />
+<img width="818" height="1126" alt="Image" src="https://github.com/user-attachments/assets/acabc2c1-a299-49c4-adca-e36bcd147ef3" />
 <br><br>
 
 
