@@ -2,7 +2,7 @@
 The Thought Lane is a feature-rich blogging platform built using Flask, MySQL, and SQLAlchemy.
 It allows users to create accounts, write blogs, upload cover images, browse posts by categories, search content, and manage their own profiles — all wrapped in a clean and minimalist UI.
 
-![Image](https://github.com/user-attachments/assets/01ba76c1-1470-44fe-b5c8-7aef465998fe) USE HOME PAGE SS
+<img width="1863" height="1605" alt="Image" src="https://github.com/user-attachments/assets/c2684992-8627-4219-8872-a1ecb5072a93" />
 
 ## Features
 - Create, view, update, and delete blog posts
