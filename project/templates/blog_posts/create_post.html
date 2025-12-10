@@ -1,0 +1,71 @@
+<!-- NEW  -->
+
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="container-inner">
+
+        <!-- heading text  -->
+        <div>
+            {% if is_update %}
+            <h2 class="heading-text">Update blog post</h2>
+            <p class="reg-size light-gray-text quat-sans-reg">Update your blog post below.</p>
+            {% else %}
+            <h2 class="heading-text">Create blog post</h2>
+            <p class="reg-size light-gray-text quat-sans-reg">Write your blog post below.</p>
+            {% endif %}
+        </div>
+
+        <!-- form  -->
+        <div class="mt-4">
+            <form method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+                <div class="mb-2">
+                    {{ form.title.label(class="form-label form-lab") }} {{ form.title(class="form-control form-txt txt-area-small", placeholder="Your blog title (keep it short and simple)") }}
+                </div>
+
+                <div class="mb-2">
+                    {{ form.text.label(class="form-label form-lab") }} {{ form.text(class="form-control form-txt txt-area", placeholder="Share your thoughts here...") }}
+                </div>
+
+                <div class="mb-2">
+                    {{ form.category.label(class="form-label form-lab") }}
+                    <div class="category-pills">
+                        {% for subfield in form.category %} {{ subfield(class="btn-check") }} {{ subfield.label(class="btn btn-pill mb-2 me-2") }} {% endfor %}
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    {% if is_update %} {{ form.blog_image.label(class="form-label form-lab", text="Change blog cover image") }}
+                    <!--  -->
+                    {% else %} {{ form.blog_image.label(class="form-label form-lab") }} {% endif %}
+                    <!--  -->
+                    {{ form.blog_image(class="form-control form-txt file-upload") }}
+                    <small class="quat-sans-reg small-size light-gray-text">Upload an image with a <strong>3:2 aspect ratio</strong> (e.g., 1200x800 pixels) for optimal display.</small>
+                </div>
+
+
+
+                <!-- submit button -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" onclick="window.history.back()" class="btn btn-link mt-2 quat-sans-reg reg-size dark-gray-text text-decoration-underline">Cancel/Back</button>
+
+                    <!--  -->
+                    {% if is_update %} {{ form.submit(class="btn btn-outline-dark mt-2", value="Update Post") }}
+                    <!--  -->
+                    {% else %} {{ form.submit(class="btn btn-outline-dark mt-2", value="Create Post") }}
+                    <!--  -->
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- end of block content  -->
+{% endblock %}

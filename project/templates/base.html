@@ -1,0 +1,130 @@
+<!-- NEW  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Thought Lane — A minimalist writing platform for meaningful stories and ideas. Share reflections in a quiet digital space designed for authentic expression, free from algorithms and ads.">
+
+    <!-- essential OG Tags -->
+    <meta property="og:image" content="{{ url_for('static', filename='the_thought_lane_og.jpg', _external=True) }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+
+    <!-- dynamic Title/Description -->
+    <meta property="og:title" content="{% block og_title %}The Thought Lane | A Quiet Space for Thoughtful Writing{% endblock %}">
+    <meta property="og:description" content="{% block og_desc %}Where thoughts settle like leaves in a lane — a digital space for unhurried writing, free from distractions.{% endblock %}">
+    <meta property="og:url" content="{{ request.url }}">
+
+    <!-- twitter Card (Optional) -->
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- fav icon  -->
+    <link rel="icon" href="{{ url_for('static', filename='the_thought_lane_fav.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='the_thought_lane_fav.svg') }}">
+
+
+    <title>The Thought Lane | A Quiet Space for Thoughtful Writing</title>
+
+</head>
+
+<body class="container-lg quat-reg d-flex flex-column min-vh-100">
+
+
+    <div class="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+        <!-- Removed the "show" class from here -->
+        <div class="flash-message alert alert-dismissible fade" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+    </div>
+
+
+    <!-- ----------------------------------------------------------------  -->
+    <!-- navbar  -->
+    <div class="quat-sans-reg reg-size">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between nav-top-bottom-padding mb-4 nav-bottom-border">
+            <div class="col-md-3 mb-md-0">
+                <a href="{{url_for('core.home')}}" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="{{ url_for('static', filename='the_thought_lane_logo.svg') }}" alt="The Thought Lane Logo" width="100">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto justify-content-center mb-md-0 ">
+                <li><a href="{{url_for('core.home')}}" class="nav-link px-2 dark-gray-text">Home</a></li>
+                <li><a href="{{url_for('core.about')}}" class="nav-link px-2 dark-gray-text">About</a></li>
+                <li><a href="{{url_for('blog_posts.create_post')}}" class="nav-link px-2 dark-gray-text">Create a Blog</a></li>
+                <li><a href="{{url_for('core.search')}}" class="nav-link px-2 dark-gray-text">Search</a></li>
+            </ul>
+
+            {% if current_user.is_authenticated %}
+            <div class="col-md-3 text-end">
+                <a href="{{url_for('users.account')}}" class="text-decoration-none dark-gray-text">{{current_user.username}}</a>
+            </div>
+            {% else %}
+            <div class="col-md-3 text-end">
+                <a href="{{url_for('users.login')}}" class="text-decoration-none px-2 dark-gray-text">Login</a>
+                <a href="{{url_for('users.register')}}" class="text-decoration-none dark-gray-text">Sign up</a>
+            </div>
+            {% endif %}
+
+        </header>
+    </div>
+
+
+
+
+
+    <!-- block content  -->
+    <main class="flex-grow-1">
+        {% block content %} {% endblock %}
+    </main>
+
+
+    <!-- ----------------------------------------------------------------  -->
+    <!-- footer  -->
+    <div class="custom-footer quat-sans-reg">
+        <footer class="py-3">
+            <p class="mb-0 text-center dark-gray-text">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                <a href="/" class="text-decoration-none dark-gray-text">The Thought Lane</a>. All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/toggle-password.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/auto-dismiss-flash.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/truncate-text.js') }}"></script>
+    <!-- include TinyMCE from CDN with your API key -->
+    <!-- <script src="https://cdn.tiny.cloud/1/p3xg46ocj4pyhmgvo0rp1ujyuzda5cjuxsr2a13zorzaw3fa/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <!-- include your custom TinyMCE initialization script -->
+    <!-- <script src="{{ url_for('static', filename='js/tinymce-init.js') }}"></script>  -->
+
+
+
+</body>
+
+</html>

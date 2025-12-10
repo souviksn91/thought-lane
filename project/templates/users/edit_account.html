@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="container-inner">
+
+        <!-- heading text  -->
+        <div>
+            <h2 class="heading-text">Edit Your Account</h2>
+            <p class="reg-size light-gray-text quat-sans-reg">Update your account details below.</p>
+        </div>
+
+        <!-- form  -->
+        <div class="mt-4">
+            <form method="POST" action="" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.first_name.label(class="form-label form-lab") }} {{ form.first_name(class="form-control form-txt", placeholder="Enter your first name") }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.last_name.label(class="form-label form-lab") }} {{ form.last_name(class="form-control form-txt", placeholder="Enter your last name") }}
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.username.label(class="form-label form-lab") }} {{ form.username(class="form-control form-txt", placeholder="Choose a username") }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.location.label(class="form-label form-lab") }} {{ form.location(class="form-control form-txt", placeholder="Enter your location (e.g. Kolkata, Bengaluru..)") }}
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.role.label(class="form-label form-lab") }} {{ form.role(class="form-control form-txt", placeholder="Your profession or role (e.g. Doctor, Artist..)") }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.password.label(class="form-label form-lab") }}
+                        <div class="position-relative">
+                            {{ form.password(class="form-control form-txt", id="password", placeholder="Enter a new password") }}
+                            <i class="fa fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-2">
+                    {{ form.bio.label(class="form-label form-lab") }} {{ form.bio(class="form-control form-txt txt-area-med", placeholder="Tell us a little about yourself (keep it short and meaningful)..", rows=4) }}
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col">
+                        {{ form.picture.label(class="form-label form-lab") }} {{ form.picture(class="form-control form-txt file-upload") }}
+                    </div>
+                </div>
+
+                <!-- submit and cancel button -->
+                <div class="d-flex justify-content-end">
+                    <!-- cancel button  -->
+                    <button type="button" onclick="window.history.back()" class="btn btn-link mt-2 quat-sans-reg reg-size dark-gray-text text-decoration-underline">Cancel/Back</button>
+                    <!-- submit button  -->
+                    {{ form.submit(class="btn btn-outline-dark mt-2") }}
+                </div>
+            </form>
+            <div>
+                <br>
+                <small class="quat-sans-reg reg-size light-gray-text">Note: Changing your password? Just make sure to remember it, as there's no 'Forgot Password' option available right now.</small>
+            </div>
+        </div>
+
+        <!-- bottom text  -->
+        <div>
+            <p class="with-divider"></p>
+            <p class="reg-size light-gray-text quat-sans-reg" style="margin-top: 20px; margin-bottom: 0px;">Don't want to keep your account?</p>
+            <a class="quat-sans-reg reg-size dark-gray-text" data-bs-toggle="modal" data-bs-target="#del_account_modal" type="button">Delete Account</a>
+        </div>
+
+
+        <!-- account deletion modal  -->
+
+        <div class="modal fade" id="del_account_modal" tabindex="-1" aria-labelledby="del_account_modal_label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="border-radius: 0;">
+                    <div class="modal-header">
+                        <h5 class="modal-title heading-text" id="del_blog_modal_label">Confirm Account Deletion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="reg-size light-gray-text quat-sans-reg" style="margin-bottom: 6px;">Are you sure you want to delete your account?</p>
+                        <p class="reg-size dark-gray-text quat-sans-reg">This action is permanent and cannot be reversed.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark mt-2" data-bs-dismiss="modal">Cancel</button>
+                        <form action="{{ url_for('users.delete_account') }}" method="POST" style="display: inline;">
+                            <button type="submit" class="btn quat-sans-reg reg-size dark-gray-text" style="text-decoration:underline;">Yes, Delete Account</button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- end of block content  -->
+    {% endblock %}

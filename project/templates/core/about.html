@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="col-lg-6 mt-6 mt-lg-0">
+        <img class="img-fluid about-img" src="{{ url_for('static', filename='about_img.jpg') }}" alt="about image">
+    </div>
+    <div class="col-lg-6 pe-sm-8 ps-lg-5">
+        <div class="overflow-hidden">
+            <h2 class="heading-text mt-4">A quiet space for passing thoughts where words gather like leaves in a lane.</h2>
+            <p class="para-text mt-4">The Thought Lane is a simple, clean, and distraction-free platform for sharing ideas, experiences, and stories. Unlike traditional blogging sites, we prioritize writing and meaningful conversations over algorithms and ads. Our mission is to
+                offer a space where individuals from different walks of life — writers, professionals, thinkers — can share perspectives freely. Whether work insights, personal reflections, or passions, consider this your digital notebook.
+                <br> <br> For now, it's a small space for friends and kindred spirits. In time, we may gently expand with features like comments or image albums, but the focus will always remain on writing.
+            </p>
+            <br>
+            <p> <span class="reg-size dark-gray-text quat-sans-bold">A Note on Security & Privacy: </span> <span class="reg-size dark-gray-text quat-sans-reg">Your data is protected, and passwords are never stored visibly (not even to us).</span></p>
+            <br>
+            <p class="reg-size light-gray-text quat-sans-reg mb-0">Thoughtfully,</p>
+            <p class="reg-size light-gray-text quat-sans-reg">Souvik</p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- end of block content  -->
+{% endblock %}

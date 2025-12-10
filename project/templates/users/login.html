@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="container-inner">
+
+        <!-- heading text  -->
+        <div>
+            <h2 class="heading-text">Login</h2>
+            <p class="reg-size light-gray-text quat-sans-reg">Welcome back! Please enter your email and password below to log in.</p>
+        </div>
+
+        <!-- form  -->
+        <div class="mt-4">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.email.label(class="form-label form-lab") }} {{ form.email(class="form-control form-txt", placeholder="Enter your email address") }} {% if form.email.errors %}
+                        <div class="text-danger email-val">
+                            {% for error in form.email.errors %}
+                            <p class="small-validation-text">{{ error }}</p><br> {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.password.label(class="form-label form-lab") }}
+                        <div class="position-relative">
+                            {{ form.password(class="form-control form-txt", id="password", placeholder="Enter your password") }}
+                            <i class="fa fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- submit button -->
+                <div class="d-flex justify-content-end">
+                    {{ form.submit(class="btn btn-outline-dark mt-2") }}
+                </div>
+            </form>
+        </div>
+
+        <!-- bottom text  -->
+        <div>
+            <p class="with-divider"></p>
+            <p class="reg-size light-gray-text quat-sans-reg" style="margin-top: 20px; margin-bottom: 0px;">Don't have an account?</p>
+            <a class="quat-sans-reg reg-size dark-gray-text" href="{{url_for('users.register')}}">Sign up now.</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end of block content  -->
+{% endblock %}

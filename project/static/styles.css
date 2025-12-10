@@ -1,0 +1,684 @@
+/* fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+/* quattrocento-sans  */
+
+.quat-sans-reg {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quat-sans-bold {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.quat-sans-reg-ita {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.quat-sans-bold-ita {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* quattrocento  */
+
+.quat-reg {
+    font-family: "Quattrocento", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.quat-bold {
+    font-family: "Quattrocento", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* font color  */
+
+.dark-gray-text {
+    color: #0E0F0F !important;
+}
+
+.light-gray-text {
+    color: #626B6B !important;
+}
+
+
+/* font size  */
+
+.reg-size {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.small-size {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* increase padding on both sides of container */
+
+.container-lg {
+    max-width: 1080px;
+}
+
+
+/* change navbar bottom border color */
+
+.nav-bottom-border {
+    border-bottom: 1px solid #626B6B !important;
+    margin-bottom: 20px !important;
+}
+
+
+/* reduce top and bottom navbar padding */
+
+.nav-top-bottom-padding {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+/* footer  */
+
+.custom-footer {
+    border-top: 1px solid #626B6B;
+    margin-top: 60px;
+    font-size: 12px;
+}
+
+.date-text {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #626B6B;
+    margin-bottom: 8px;
+}
+
+.card-header-text {
+    font-family: "Quattrocento", serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #0E0F0F;
+    text-decoration: none;
+}
+
+.card-para-text {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #0E0F0F;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-img-bw {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.card-img-bw:hover {
+    filter: grayscale(0%);
+}
+
+.para-text {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #0E0F0F;
+}
+
+.heading-text {
+    font-family: "Quattrocento", serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #0E0F0F;
+}
+
+.about-heading-text {
+    font-family: "Quattrocento", serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #0E0F0F;
+}
+
+.about-img {
+    max-width: 100%;
+    /* Ensures responsiveness */
+    height: auto;
+}
+
+.container-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/* medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .container-inner {
+        max-width: 90%;
+    }
+}
+
+
+/* large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .container-inner {
+        max-width: 80%;
+    }
+}
+
+
+/* extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .container-inner {
+        max-width: 60%;
+    }
+}
+
+
+/* line divider  */
+
+.with-divider {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.with-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #CBD0D0;
+}
+
+.form-lab {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0E0F0F;
+    font-size: 15px;
+    margin-bottom: 0.2rem
+}
+
+.form-txt {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0E0F0F;
+    font-size: 15px;
+    height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+/* Base input styling */
+
+.form-control {
+    border: 1px solid #CBD0D0;
+    border-radius: 0;
+    color: #0E0F0F;
+    padding: 0.4rem;
+    box-shadow: none !important;
+}
+
+
+/* Styling when the input is focused */
+
+.form-control:focus {
+    border: 1px solid #0E0F0F;
+    box-shadow: none !important;
+    outline: none;
+}
+
+.btn-outline-dark {
+    border: 1px solid #0E0F0F;
+    border-radius: 0;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0E0F0F;
+    font-size: 15px;
+    background-color: transparent;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    height: 40px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #0E0F0F;
+    color: #ffffff;
+}
+
+.btn-dark {
+    background-color: #0E0F0F;
+    border-radius: 0;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 15px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 40px;
+}
+
+.btn-dark:hover {
+    background-color: #0E0F0F;
+    color: #ffffff;
+}
+
+.btn:focus,
+.btn:active {
+    outline: none;
+    border: none;
+}
+
+.txt-area {
+    height: 280px !important;
+}
+
+.txt-area-med {
+    height: 120px !important;
+}
+
+.txt-area-small {
+    height: 60px !important;
+}
+
+
+/* ----- custom file upload field ----- */
+
+.file-upload {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+
+/* style the actual 'Choose File' button text for Webkit browsers */
+
+.file-upload::-webkit-file-upload-button {
+    background: #CBD0D0;
+    border: none;
+    text-decoration: underline;
+    color: #0E0F0F;
+    cursor: pointer;
+}
+
+
+/* style for internet explorer/edge */
+
+.file-upload::-ms-browse {
+    background: #CBD0D0;
+    border: none;
+    text-decoration: underline;
+    color: #0E0F0F;
+    cursor: pointer;
+}
+
+.blog-text {
+    height: 200px;
+}
+
+.pro-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+
+/* mobile devices (portrait phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+    .pro-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/* extra small devices (phones less than 576px) */
+
+@media (max-width: 575.98px) {
+    .pro-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* toggle eye  */
+
+
+/* container to allow absolute positioning of the icon */
+
+.position-relative {
+    position: relative;
+}
+
+
+/* add right padding so text does not overlap the icon */
+
+#password {
+    padding-right: 2.5rem;
+}
+
+
+/* position the eye icon inside the input field */
+
+.togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #626B6B;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.modal-header .btn-close {
+    width: 1rem;
+    height: 1rem;
+    background-size: 0.8rem 0.8rem;
+}
+
+
+/* remove the thick blue outline when clicked  */
+
+.btn:focus,
+.btn:active,
+.btn:focus-visible,
+.btn-close:focus,
+.btn-close:active,
+.btn-close:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* remove focus and active state styles for the delete account button */
+
+.modal-footer input[type="submit"]:focus,
+.modal-footer input[type="submit"]:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+/* remove inner focus border in Firefox */
+
+.modal-footer input[type="submit"]::-moz-focus-inner {
+    border: 0;
+}
+
+
+/* remove all focus styles for this specific button */
+
+.btn[type="submit"]:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* flash message styling */
+
+.flash-messages {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    z-index: 1000;
+    padding: 10px;
+    text-align: left;
+}
+
+.flash-message {
+    background-color: white;
+    color: #0E0F0F;
+    border: 1px solid #0E0F0F;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.flash-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* close button styling */
+
+.flash-message .btn-close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    background-size: 0.6rem 0.6rem;
+}
+
+
+/* proper email validation error  */
+
+.small-validation-text {
+    padding-top: 4px;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1;
+    color: #0E0F0F;
+}
+
+.email-val {
+    height: 10px;
+}
+
+.image-container {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* pagination  */
+
+.custom-pagination .page-link {
+    color: #626B6B;
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    /* background-color: transparent; */
+    border: 1px solid #626B6B;
+    border-radius: 0px !important;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.custom-pagination .page-link:hover {
+    background-color: #F0F6F6;
+}
+
+.custom-pagination .page-item.active .page-link {
+    color: #626B6B;
+    background-color: #F0F6F6;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    color: #CBD0D0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.custom-pagination .page-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* center the pagination horizontally */
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Add this to your CSS file */
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+/* custom styles for the category dropdown */
+
+.form-select {
+    /* change dropdown arrow color */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23626B6B' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e");
+}
+
+
+/* pill radio buttons */
+
+.btn-check {
+    position: absolute;
+    opacity: 0;
+}
+
+.btn-pill {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 0px;
+    border: 1px solid #CBD0D0;
+    background: white;
+    color: #626B6B;
+    transition: all 0.2s;
+}
+
+.btn-check+.btn:hover {
+    border: 1px solid #CBD0D0;
+    background: #F0F6F6;
+    color: #626B6B;
+}
+
+.btn-check:checked+.btn-pill {
+    background: #CBD0D0;
+    border-color: #CBD0D0;
+    color: #0E0F0F;
+}
+
+
+/* category tag */
+
+.category-tag {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    background-color: #DBE2E2;
+    color: #0E0F0F;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.category-tag:hover {
+    background-color: #CBD0D0;
+    color: #0E0F0F;
+    text-decoration: none;
+}
+
+.card-category-tag {
+    display: inline-block;
+    padding: 0rem 0.4rem;
+    background-color: #DBE2E2;
+    color: #0E0F0F;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+
+/* social icons */
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    font-size: 15px;
+    color: #626B6B;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #0E0F0F;
+}

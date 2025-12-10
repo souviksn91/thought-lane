@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="container-inner">
+
+        <!-- heading text  -->
+        <div>
+            <h2 class="heading-text">Sign Up</h2>
+            <p class="reg-size light-gray-text quat-sans-reg">Join The Thought Lane! Create your account below.</p>
+        </div>
+
+        <!-- form  -->
+        <div class="mt-4">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.first_name.label(class="form-label form-lab") }} {{ form.first_name(class="form-control form-txt", placeholder="Enter your first name") }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.last_name.label(class="form-label form-lab") }} {{ form.last_name(class="form-control form-txt", placeholder="Enter your last name") }}
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.email.label(class="form-label form-lab") }} {{ form.email(class="form-control form-txt", placeholder="Enter your email address") }} {% if form.email.errors %}
+                        <div class="text-danger email-val">
+                            {% for error in form.email.errors %}
+                            <p class=" small-validation-text ">{{ error }}</p><br> {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.username.label(class="form-label form-lab ") }} {{ form.username(class="form-control form-txt ", placeholder="Choose a username ") }}
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.location.label(class="form-label form-lab") }} {{ form.location(class="form-control form-txt", placeholder="Enter your location (e.g. Kolkata, Bengaluru..)") }}
+                        <small class="quat-sans-reg small-size light-gray-text">Please use correct spelling</small>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.role.label(class="form-label form-lab") }} {{ form.role(class="form-control form-txt", placeholder="Your profession or role (e.g. Doctor, Artist..)") }}
+                        <small class="quat-sans-reg small-size light-gray-text">Please use correct spelling</small>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2 ">
+                    <div class="col-12 col-md-6 mb-2 mb-md-0">
+                        {{ form.password.label(class="form-label form-lab ") }}
+                        <div class="position-relative">
+                            {{ form.password(class="form-control form-txt", placeholder="Create a password") }}
+                            <i class="fa fa-eye togglePassword"></i>
+                        </div> {% if form.password.errors %}
+                        <div class="text-danger email-val">
+                            {% for error in form.password.errors %}
+                            <p class="small-validation-text" style="font-weight: 700;">{{ error }}</p><br> {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {{ form.conf_password.label(class="form-label form-lab ") }}
+                        <div class="position-relative">
+                            {{ form.conf_password(class="form-control form-txt", placeholder="Confirm your password") }}
+                            <i class="fa fa-eye togglePassword"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- submit button -->
+                <div class="d-flex justify-content-end ">
+                    {{ form.submit(class="btn btn-outline-dark mt-2 ") }}
+                </div>
+            </form>
+
+            <div>
+                <br>
+                <small class="quat-sans-reg reg-size light-gray-text">Note: Please remember your password, as there's no 'Forgot Password' option currently.</small>
+            </div>
+        </div>
+
+        <!-- bottom text  -->
+        <div>
+            <p class="with-divider "></p>
+            <p class="reg-size light-gray-text quat-sans-reg " style="margin-top: 20px; margin-bottom: 0px; ">Already have an account?</p>
+            <a class="quat-sans-reg reg-size dark-gray-text " href="{{url_for( 'users.login')}} ">Log in here.</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- end of block content  -->
+{% endblock %}

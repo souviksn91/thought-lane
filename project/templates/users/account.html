@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+<!-- start block content  -->
+{% block content %}
+
+<div class="row align-items-center">
+    <div class="container-inner">
+
+        <!-- heading  -->
+        <!-- <a href="#" onclick="window.history.back(); return false;" class="btn-link quat-sans-reg reg-size dark-gray-text text-decoration-underline">Back</a> -->
+        <div class="">
+            <img src="{{url_for('static', filename='profile_pics/'+current_user.profile_image)}}" alt="Profile Image" class="pro-img">
+            <h2 class="heading-text mt-4">{{current_user.username}}</h2>
+        </div>
+
+        <!-- info  -->
+        <div class="mt-4">
+
+            <div class="row mb-0">
+                <div class="col-12 col-md-6 mb-0 mb-md-0">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Name</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{current_user.first_name}} {{current_user.last_name}}</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Username</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{current_user.username}}</p>
+                </div>
+            </div>
+
+            <div class="row mb-0">
+                <div class="col-12 col-md-6 mb-0 mb-md-0">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Email ID</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{current_user.email}}</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Location</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{current_user.location}}</p>
+                </div>
+            </div>
+
+            <div class="row mb-0">
+                <div class="col-12 col-md-6 mb-0 mb-md-0">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Profession or Role</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{current_user.role}}</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="reg-size light-gray-text quat-sans-reg mb-0">Joined</p>
+                    <p class="reg-size dark-gray-text quat-sans-reg">{{ current_user.account_created.strftime('%d %B %Y') }}</p>
+                </div>
+            </div>
+
+
+            <div class="mb-0">
+                <p class="reg-size light-gray-text quat-sans-reg mb-0">Bio</p>
+                <p class="reg-size dark-gray-text quat-sans-reg">
+                    {% if current_user.bio %} {{ current_user.bio }} {% else %}
+                    <!-- shows nothing if no bio -->
+                    {% endif %}
+                </p>
+            </div>
+
+        </div>
+
+        <!-- bottom text  -->
+        <div>
+            <p class="with-divider"></p>
+            <div class="d-flex align-items-center" style="margin-top: 10px;">
+                <a class="quat-sans-reg reg-size dark-gray-text" href="{{url_for('users.edit_account')}}">Edit Account</a>
+                <div class="ms-auto d-flex gap-3">
+                    <a class="quat-sans-reg reg-size dark-gray-text" href="{{url_for('users.logout')}}">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- end of block content  -->
+{% endblock %}
