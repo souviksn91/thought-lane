@@ -23,6 +23,7 @@ It allows users to create accounts, write blogs, upload cover images, browse pos
 ## Screenshots
 
 - **Sign Up Page**
+<br>
   User registration form with unique username and email validation.
 
   <img width="803" height="773" alt="Image" src="https://github.com/user-attachments/assets/49385475-3e11-4e93-b2b0-75bfe5bf583d" />
