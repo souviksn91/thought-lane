@@ -105,4 +105,10 @@ It allows users to create accounts, write blogs, upload cover images, browse pos
    ```
 6. **Access in browser:**
    http://127.0.0.1:5000/
+
+
+<br>
+
+---
+Author: **Souvik Sinha**
    
