@@ -2,7 +2,8 @@
 The Thought Lane is a feature-rich blogging platform built using Flask, MySQL, and SQLAlchemy.
 It allows users to create accounts, write blogs, upload cover images, browse posts by categories, search content, and manage their own profiles — all wrapped in a clean and minimalist UI.
 
-<img width="1863" height="1605" alt="Image" src="https://github.com/user-attachments/assets/a4884a7d-251d-4031-b9b9-562abdd5e30f" />
+![TTL Home](docs/screenshots/ttl_home.png)
+---
 
 ## Features
 - Create, view, update, and delete blog posts
@@ -22,80 +23,60 @@ It allows users to create accounts, write blogs, upload cover images, browse pos
 
 ## Screenshots
 
-  **Sign Up Page:**
-<br>
-  User registration form with unique username and email validation.
+**Sign Up Page:** User registration form with unique username and email validation.
 
-<img width="600" height="578" alt="Image" src="https://github.com/user-attachments/assets/78439658-78ac-4fc8-ae3f-d05c813c3f1a" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_signup.png)
+---
 
 
-  **Create New Blog Post:**
-<br>
-  Blog creation form featuring category selection and image upload support.
+**Create New Blog Post:** Blog creation form featuring category selection and image upload support.
 
-<img width="600" height="826" alt="Image" src="https://github.com/user-attachments/assets/8b3a10e3-8e40-40db-9a69-0df196b34820" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_create_blog.png)
+---
 
 
-  **Single Blog Post View:**
-<br>
-  Displays the full blog post with edit/delete controls for the authenticated author.
+**Single Blog Post View:** Displays the full blog post with edit/delete controls for the authenticated author.
 
-  <img width="600" height="896" alt="Image" src="https://github.com/user-attachments/assets/0c7896c4-e079-4654-a22e-9b204e6e32e6" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_blog.png)
+---
 
 
-  **Delete Confirmation Modal:**
-<br>
-  A confirmation popup asking the author to verify before deleting a post.
+**Delete Confirmation Modal:** A confirmation popup asking the author to verify before deleting a post.
 
-  <img width="600" height="496" alt="Image" src="https://github.com/user-attachments/assets/1394282f-0a46-4b11-b3ab-f0ff004eb3d1" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_blog_delete.png)
+---
 
 
-  **Category Filter Page:**
-<br>
-  Lists all posts under a selected category with pagination for smooth navigation.
+**Category Filter Page:** Lists all posts under a selected category with pagination for smooth navigation.
 
-  <img width="600" height="782" alt="Image" src="https://github.com/user-attachments/assets/3037f991-e983-450e-9094-5bc76012c40b" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_category_blogs.png)
+---
 
 
-  **User Blogs Page:**
-<br>
-  Shows all blog posts written by a specific user.
+**User Blogs Page:** Shows all blog posts (with pagination) written by a specific user.
 
-  <img width="600" height="1356" alt="Image" src="https://github.com/user-attachments/assets/925e9910-6214-4c41-9cc7-3117115a9e69" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_user_blogs.png)
+---
 
 
-  **Search Results Page:**
-<br>
-  Displays posts matching the search query across titles, content, and categories.
+**Search Results Page:** Displays posts (with pagination) matching the search query across titles, content, and categories.
 
-  <img width="600" height="1007" alt="Image" src="https://github.com/user-attachments/assets/3d031490-0aae-48ec-9247-9df1d1c26f83" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_search.png)
+---
 
 
-  **User Profile Page:**
-<br>
-  Shows user details with a default avatar, plus options to update the profile or log out.
+**User Profile Page:** Shows user details with a default avatar, plus options to update the profile or log out.
 
-  <img width="600" height="504" alt="Image" src="https://github.com/user-attachments/assets/86f5ecba-76c3-4be5-a666-b312a3c181c1" />
-<br><br>
+![TTL Sign up](docs/screenshots/ttl_profile.png)
+---
 
 
-  **Edit Profile Page:**
-<br>
-  Form to update account information with an optional delete-account action.
+**Edit Profile Page:** Form to update account information with an optional delete-account action.
 
-  <img width="600" height="688" alt="Image" src="https://github.com/user-attachments/assets/366f7a3e-1d23-43ab-a90d-7326b24169dc" />
-  <br>
+![TTL Sign up](docs/screenshots/ttl_edit_profile.png)
+---
 
 
-
-<hr>
 
 ## Setup Instructions
 1. **Clone the repository:**
